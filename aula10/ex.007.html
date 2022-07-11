@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>somando números</title>
+ 
+</head>
+<body>
+    <h1>Soma de números</h1>
+    <input type="number"id='soma1'> +
+    <input type="number"id='soma2'>
+    <input type="button" value="Somar" onclick="clicarsoma()">
+    <div id="res">
+    Resultado
+    </div>
+    <h1>Subtração de números</h1>
+    <input type="number" name="sub1" id="sub1"> -
+    <input type="number" name="sub2" id="sub2">
+    <input type="button" value="subtrair" onclick="clicarsubtrair()">
+    <div id="resmenos">
+        Resultado
+    </div>
+    <h1>Multiplicação de números</h1>
+    <input type="number" name="mult1" id="mult1"> x
+    <input type="number" name="mult2" id="mult2">
+    <input type="button" value="multiplicar" onclick="clicarmult()">
+    <div id="resmult">
+        Resultado
+    </div>
+    <h1>Divisão de números</h1>
+    <input type="number" name="di1" id="di1"> /
+    <input type="number" name="di2" id="di2">
+    <input type="button" value="dividir" onclick="clicardiv()">
+    <div id="resdiv">
+        Resultado
+    </div>
+
+    <script>
+
+        function clicarsoma(){
+
+        var tn1 =document.getElementById('soma1')
+        var tn2 =document.getElementById('soma2')
+        var res =document.getElementById('res')
+        var n1=Number(tn1.value)
+        var n2=Number(tn2.value)
+        var soma = n1 + n2
+        res.innerText= `A soma de ${n1} e ${n2} é ${soma}`
+        }
+
+        function clicarsubtrair(){
+
+        var tn1 =document.getElementById('sub1')
+        var tn2 =document.getElementById('sub2')
+        var resmenos =document.getElementById('resmenos')
+        var n1 =Number(tn1.value)
+        var n2 =Number(tn2.value)
+        var subtracao = n1 - n2
+        resmenos.innerText = `A subtração de ${n1} e ${n2} é ${subtracao}`
+
+        }
+        function clicarmult(){
+            var tn1=document.querySelector('input#mult1')
+            var tn2=document.querySelector('input#mult2')
+            var resmult=document.getElementById('resmult')   
+            var n1 =Number(tn1.value)
+            var n2 =Number(tn2.value)
+            var multiplicação = n1*n2
+            resmult.innerText=`${n1} vezes ${n2} é ${multiplicação}`
+        }
+        function clicardiv(){
+            var tn1 =document.getElementById('di1')
+            var tn2 =document.getElementById('di2')
+            var resdiv=document.getElementById('resdiv')
+            var n1 =Number(tn1.value)
+            var n2 =Number(tn2.value)
+            var dividir = n1 / n2
+            resdiv.innerText=`${n1} dividido por ${n2} é ${dividir}`
+        }
+      
+    </script>
+</body>
+</html>

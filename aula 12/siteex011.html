@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título Eleitoral</title>
+</head>
+<body>
+    <h1>Confirme se pode votar</h1>
+    <p>Informe sua idade para saber se está apto
+    a votar</p>
+    <input type="number" name="idade" id="idade">
+    <input type="button" value="Verificar" onclick="clicar()">
+    <div id='verificação'>
+
+    </div>
+
+
+    <script>
+        function clicar(){
+            var idadetxt =document.getElementById('idade')
+            var verificação=document.getElementById('verificação')
+            var idade =Number(idadetxt.value)
+            verificação.innerHTML=`A sua idade é ${idade} anos`
+
+            if(idade <16){
+                verificação.innerHTML+=` Você ainda não vota` 
+            }
+            else if(idade < 18 || idade >67){
+                verificação.innerHTML+=` Seu voto é opcional`   
+            }
+            else{
+                verificação.innerHTML+= ` Seu voto é obrigatório`
+            }
+            
+        }
+    </script>
+</body>
+</html>

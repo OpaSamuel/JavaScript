@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buenos Dias</title>
+</head>
+<body>
+    <h1>Bom dia, boa tarde, boa night</h1>
+    <p>Que horas são:</p>
+    <input type="number" id="horatx">
+    <input type="button" value="Verificar" onclick="clicar()">
+    <div id="verificar">
+
+    </div>
+
+    <script>
+        function clicar(){
+            var hotatx =document.getElementById('horatx')
+            var verificar=document.getElementById('verificar')
+            var horas =Number(hotatx.value)
+            verificar.innerHTML=`São ${horas} horas`
+            if(horas >=0 && horas <=5){
+                verificar.innerHTML+=`<strong> Boa Madrugada</strong>`
+            }
+            else if(horas<=12){
+                verificar.innerHTML+=`<strong> Bom Dia</strong>`
+            }
+            else if(horas> 12 && horas < 18){
+                verificar.innerHTML+=`<strong> Boa Tarde</strong>`
+            }
+            else{
+                verificar.innerHTML+=`<strong> Boa Noite<?strong>`
+            }
+        }
+    </script>
+</body>
+</html>
