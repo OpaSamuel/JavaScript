@@ -35,9 +35,7 @@ footer{
     font-size: 1.1em;
     text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.473);
 }
-input#numtx{
-    width: 100px;
-}
+
 select{
     width: 120px;
 }

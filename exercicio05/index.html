@@ -6,29 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analisador de Números</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="main.js"></script>
+
 </head>
 <body>
-    <header>
-        <h1>Analisador de Números</h1>
-    </header>
+    <header><h1>Analisador de Números</h1></header>
+_
     <section>
         <div>
-            Informe um número: 
-            <input type="number" name="ntx" id="ntx">
+            Digite um número: <input type="number" id="numtx">
             <input type="button" value="Adicionar" onclick="adicionar()">
-            <br><select name="sel" id="numeros" size="5"></select>
-            <br><input type="button" value="Finalizar" onclick="finalizar()">
-            
+            <select name="select" id="dados" size="6">
+
+            </select> <br>
+            <input type="button" value="Finalizar" onclick="finalizar()">
             
         </div>
 
-        <div id="res">
-
-        </div>
+        <div id="res"></div>
     </section>
-    <footer>
-        <p>OpaSamuel</p>
-    </footer>
 </body>
 </html>
